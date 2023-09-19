@@ -4,9 +4,22 @@
     box-sizing: border-box;
 }
 
+:root {
+    --header-color: #738FA7;
+    --text-general: #fff;
+    --text-highlight: #C3E0E5;
+}
+
 body { 
     background-color: #071330;
     font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header,
+main {
+    width: 95%;
 }
 
 nav {
@@ -24,14 +37,14 @@ a {
 
 li>a.nav-link,
 li>a.nav-link:visited {
-    color: #fff;
+    color: var(--text-general);
     font-size: 0.8rem;
     line-height: 130%;
     margin: 30px 15px;
 }
 
 li>a.nav-link:hover {
-    color: #738FA7;
+    color: var(--header-color);
 }
 
 /* -- General Section height, width, margins, paddings -- */
@@ -40,13 +53,49 @@ li>a.nav-link:hover {
     align-items: center;
     width: 100%;
     height: 500px;
+    margin-left: 100px;
 }
 
 .section__about {
+    display:flex;
+    align-items: center;
+    justify-content: center;
     height: 600px;
     width: 100%;
-    background-color: #738FA7;
+
 }
+
+.section__about-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+p.section__about-text {
+    color: var(--text-general);
+    padding: 30px 0;
+}
+
+h2 {
+    color: var(--header-color);
+}
+
+div.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.myself {
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 0.5rem #C3E0E5, -0.5rem -0.5rem #ccc;
+}
+
+.stack__icons-list_item img {
+    height: 30px;
+    padding-right: 10px;
+} 
 
 .section__education {
     width: 100%;
@@ -57,7 +106,7 @@ li>a.nav-link:hover {
 .section__projects {
     width: 100%;
     height: 500px;
-    background-color: #738FA7;
+    background-color: var(--header-color);
 }
 
 .section__contact {
@@ -66,11 +115,9 @@ li>a.nav-link:hover {
     background-color: #071330;
 }
 
-
-
 #intro__heading,
 #intro__heading-sub {
-    color: #738FA7;
+    color: var(--header-color);
 }
 
 #intro__heading-sub {
@@ -79,17 +126,17 @@ li>a.nav-link:hover {
 }
 
 p#intro__heading-text {
-    color: #fff;
+    color: var(--text-general);
 }
 
 span.section__about-bullet {
-    color: #C3E0E5;
-    font-size: 3rem;
+    color: var(--text-highlight);
+    padding-right: 5px
 }
 
 #intro__heading-button {
     background-color: #738FA7;
-    color: #fff;
+    color: var(--text-general);
     border-radius: 8px;
     padding: 8px 20px;
     margin: 20px;
@@ -108,8 +155,8 @@ button.resume {
 }
 
 button.resume:hover {
-    background-color: #738FA7;
-    color: #fff;
+    background-color: var(--header-color);
+    color: var(--text-general);
     transition: 0.8s;
 }
 
@@ -121,6 +168,10 @@ ul.navbar-nav {
 i.fa-download {
     padding-left: 5px;
     font-size: 1rem;
+}
+
+.navbar-brand {
+    margin-left: 100px;
 }
 
 .navbar-brand img {
@@ -137,6 +188,11 @@ div.container {
     list-style: none;
 }
 
+.section__about-h2 {
+    display: flex;
+    justify-content: flex-end;
+}
+
 @media screen and (max-width: 768px) {
     .section__hero {
         padding-left: 50px;
@@ -150,14 +206,24 @@ div.container {
     }
 }
 
+li.stack__icons-list_item {
+    display: inline;
+}
+
+hr {
+    color: var(--text-general);
+
+}
+
 /* MAKE SURE YOUR TEXT IS CONSISTENT SIZING TO MAKE MEDIA QUERIES FASTER */
+/* Should I make some root settings here for font families and colours?? Saves me typing them in all the time */
 
 i.fa-brands {
     font-size: 1.5rem;
-    color: #738FA7;
+    color: var(--header-color);
     transition: 0.8s
 }
 
 i:hover {
-    color: #fff;
+    color: var(--text-general);
 }
