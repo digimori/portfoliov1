@@ -115,10 +115,7 @@ img.myself {
     padding-right: 10px;
 } 
 
-.stack__icons-list_item-card img {
-    height: 30px;
-    padding-right: 10px;
-}
+
 
 .section__education {
     width: 100%;
@@ -139,7 +136,7 @@ img.myself {
 .section__contact {
     width: 75%;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 60px;
 }
 
 .section__contact-h2 {
@@ -162,20 +159,25 @@ img.myself {
 #intro__heading,
 #intro__heading-sub {
     color: var(--header-color);
+    letter-spacing: 1px;
 }
 
 #intro__heading {
     font-size: 2.3rem;
+    font-weight: 700;
 }
 
 #intro__heading-sub {
     padding-left: 30px;
     font-size: 1.5em;
+    font-weight: 500;
 }
 
 p#intro__heading-text {
     color: var(--text-general);
     font-size: 0.9rem;
+    margin-top: 20px;
+    font-weight: 500;
 }
 
 span.section__about-bullet {
@@ -297,18 +299,15 @@ i:hover {
 
 .section__education-qualification p {
     color: var(--text-general);
+}
+
+.section__education-qualification h3 {
+    color: var(--header-color);
+    font-size: 1.4rem;
+}
+
+.section__education {
     padding: 30px 0;
-}
-
-li.stack__icons-list_item-card {
-    display: inline;
-}
-
-.stack__icons-list_card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 1rem;
 }
 
 .card-title {
@@ -337,3 +336,54 @@ a.github_repo {
 }
 
 
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+    object-position: 30% 0;
+}
+
+.tech-stack {
+    border: none;
+    background-color: var(--header-color);
+    color: var(--text-general);
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-size: 0.8rem;
+    margin-top: 8px;
+}
+
+button.tech-stack  {
+    cursor: none;
+    pointer-events: none;
+}
+
+footer {
+    color: var(--text-highlight);
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+footer>span {
+    color: var(--text-general);
+}
+
+.section__contact-div h2,
+.section__contact-div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section__contact-div a {
+    color: #C3E0E5;
+}
+
+.offcanvas__button-toggle {
+    background-color: var(--header-color);
+}
+
+i.fa-bars {
+    color: #071330;
+    font-size: 2rem;
+}
