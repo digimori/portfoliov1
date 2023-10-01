@@ -60,7 +60,6 @@ li>a.nav-link:hover {
     display:flex;
     align-items: center;
     justify-content: center;
-    height: 600px;
     width: 100%;
 
 }
@@ -104,9 +103,13 @@ img.myself {
 }
 
 .section__projects {
-    width: 100%;
-    height: 500px;
-    background-color: var(--header-color);
+    width: 75%;
+    margin: 0 auto;
+}
+
+.section__projects-h2 {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .section__contact {
@@ -141,11 +144,14 @@ span.nav-no {
 
 #intro__heading-button {
     background-color: #738FA7;
-    color: var(--text-general);
     border-radius: 8px;
     padding: 8px 20px;
     margin: 20px;
     border: none;
+}
+
+#intro__heading-button a {
+    color: var(--text-general);
 }
 
 button.resume {
@@ -223,6 +229,14 @@ hr {
 
 /* MAKE SURE YOUR TEXT IS CONSISTENT SIZING TO MAKE MEDIA QUERIES FASTER */
 /* Should I make some root settings here for font families and colours?? Saves me typing them in all the time */
+
+
+.projects__card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+}
 
 i.fa-brands {
     font-size: 1.5rem;

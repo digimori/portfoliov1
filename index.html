@@ -41,8 +41,6 @@
         </div>
       </div>
     </nav>
-
-
   </header>
 
   <main>
@@ -71,13 +69,14 @@
             venison burgdoggen
           </p>
           <div class="col-4 col-sm-12">
-            <button id="intro__heading-button">View my Projects</button>
+            <button id="intro__heading-button"><a href="#projects">View my Projects</a></button>
           </div>
         </div>
       </div>
       </div>
     </section>
 
+  <!-- About Me -->
   <section class="section__about" id="about">
     <div class="row section__about-row">
       <div class="col-2"></div>
@@ -93,13 +92,13 @@
         <div class="row stack__icons">
           <div class="col-sm-12">
             <ul class="stack__icons-list">
-              <li class="stack__icons-list_item"><img src="/assets/1024px-HTML5_Badge.svg.png" alt="HTML5"></li>
-              <li class="stack__icons-list_item"><img src="/assets/CSS3_logo.svg.png" alt="CSS3"></li>
-              <li class="stack__icons-list_item"><img src="/assets/javascript-1.svg" alt="JavaScript"></li>
-              <li class="stack__icons-list_item"><img src="/assets/Bootstrap_logo.svg.png" alt="Bootstrap"></li>
-              <li class="stack__icons-list_item"><img src="/assets/React-icon.svg.png" alt="React"></li>
-              <li class="stack__icons-list_item"><img src="/assets/Tailwind_CSS_Logo.svg.png" alt="Tailwind"></li>
-              <li class="stack__icons-list_item"><img src="/assets/mongodb.svg" alt="MongoDB"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/1024px-HTML5_Badge.svg.png" alt="HTML5"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/CSS3_logo.svg.png" alt="CSS3"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/javascript-1.svg" alt="JavaScript"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/Bootstrap_logo.svg.png" alt="Bootstrap"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/React-icon.svg.png" alt="React"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/Tailwind_CSS_Logo.svg.png" alt="Tailwind"></li>
+              <li class="stack__icons-list_item"><img src="assets/icons/mongodb.svg" alt="MongoDB"></li>
             </ul>
           </div>
         </div>
@@ -108,37 +107,126 @@
     </div>
   </section>
 
+  <!--Education-->
+
   <section class="section__education" id="education">
 
    
-        <!-- Offcanvas nav -->
-        
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            ...
-          </div>
-        </div>
-    
-        <!-- Offcanvas End-->
+      
 
 
 </section>
+
+<!--Projects-->
 <section class="section__projects" id="projects">
+  <div class="col-12">
+    <h2 class="section__projects-h2"><span class="section__about-bullet">.</span>Projects</h2>
+    <hr class="separator" />
+    </div>
+  <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-3">
+    <div class="col projects__card-container">
+      <div class="card h-100 w-75">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript Game - Dice Game</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="live_preview"><a href="https://digimori.github.io/diceGame/" target="_blank" aria-label="Live Preview (Link opens in new tab)">Live Preview</a></p>
+          <p class="github_repo"><a href="https://github.com/digimori/diceGame" target="_blank">Github repo</a></p>
+          <!-- Insert Tech stack used for this -->
+        </div>
+      </div>
+    </div>
+    <div class="col projects__card-container">
+      <div class="card h-100 w-75">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript Project - Drum Kit</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="live_preview"><a href="https://digimori.github.io/drumKitGame/" target="_blank" aria-label="Live Preview (Link opens in new tab)">Live Preview</a></p>
+          <p class="github_repo"><a href="https://github.com/digimori/drumKitGame" target="_blank">Github repo</a></p>
+          <!-- Insert Tech stack -->
+        </div>
+      </div>
+    </div>
+    <div class="col projects__card-container">
+      <div class="card h-100 w-75">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">JavaScript Game - Genshin Impact Quiz</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="live_preview"><a href="https://digimori.github.io/MilestoneProjectTwoGenshinQuiz/" target="_blank" aria-label="Live Preview (Link opens in new tab)">Live Preview</a></p>
+          <p class="github_repo"><a href="https://github.com/digimori/MilestoneProjectTwoGenshinQuiz" target="_blank">Github repo</a></p>
+          <!--Insert Tech Stack-->
+        </div>
+      </div>
+    </div>
+    <div class="col projects__card-container">
+      <div class="card h-100 w-75">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Personal Library App</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="live_preview"><a href="https://personal-library-mongodb.herokuapp.com/" target="_blank" aria-label="Live Preview (Link opens in new tab)">Live Preview</a></p>
+          <p class="github_repo"><a href="https://github.com/digimori/PersonalLibraryApp/" target="_blank">Github repo</a></p>
+          <!--Insert Tech Stack-->
+        </div>
+      </div>
+    </div>
+    <div class="col projects__card-container">
+      <div class="card h-100 w-75">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Cottage Delights</h5>
+          <p class="card-text">E-Commerce</p>
+          <!-- Insert span icons for preview and repo -->
+          <p class="live_preview"><a href="https://cottagedelights.herokuapp.com/" target="_blank" aria-label="Live Preview (Link opens in new tab)">Live Preview</a></p>
+          <p class="github_repo"><a href="https://github.com/digimori/CottageDelights" target="_blank">Github repo</a></p>
+          <!--Insert Tech Stack-->
+        </div>
+      </div>
+    </div>
+    <div class="col projects__card-container">
+      <div class="card h-100 w-75">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="https://goldsexerciseapp.netlify.app/" target="_blank" aria-label="Personal Fitness App (Link opens in new tab)">Personal Fitness App</a>
+          </h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+          <p class="live_preview"><a href="https://goldsexerciseapp.netlify.app/" target="_blank" aria-label="Live Preview (Link opens in new tab)">Live Preview</a></p>
+          <p class="github_repo"><a href="https://github.com/digimori/fitnessapp" target="_blank">Github repo</a></p>
+          <!--Insert Tech Stack-->
+        </div>
+      </div>
+    </div>
+  </div>
 
 </section>
-<section class="section__contact" id="contact">
 
+<!--Contact-->
+<section class="section__contact" id="contact">
+<!--just a small mailTo for now. Setup an SMTP form later-->
 </section>
 
 <footer>Website created by <span>Paige Bendall</span></footer>
 
 </main>
+
+  <!-- Offcanvas nav -->
+        
+  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Toggle right offcanvas</button>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      ...
+    </div>
+  </div>
+
+  <!-- Offcanvas End-->
 
 
 <!-- Scripts -->
