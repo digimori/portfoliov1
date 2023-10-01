@@ -77,13 +77,12 @@
     </section>
 
   <!-- About Me -->
-  <section class="section__about" id="about">
+  <section class="section__about container-fluid" id="about">
     <div class="row section__about-row">
-      <div class="col-2"></div>
-      <div class="col-md-4 col-sm-12 image-container">
+      <div class="col-md-12 col-sm-12 col-lg-6 image-container">
         <img src="/assets/muhself.png" class="myself" alt="Image" />
       </div>
-      <div class="col-12 col-md-4">
+      <div class="col-12 col-md-12 col-lg-4">
         <h2 class="section__about-h2"><span class="section__about-bullet">.</span>About</h2>
         <hr class="separator" />
         <p class="section__about-text">
@@ -110,8 +109,19 @@
   <!--Education-->
 
   <section class="section__education" id="education">
+    <div class="col-12">
+      <h2 class="section__education-h2"><span class="section__about-bullet">.</span>Education</h2>
+      <hr class="separator" />
+      </div>
 
-   
+    <div class="row">
+    <div class="col-12 col-sm-6 section__education-qualification">
+<p>Code institute stuff</p>
+    </div>
+    <div class="col-12 col-sm-6 section__education-qualification">
+      <p>Udemy stuff</p>
+    </div>
+   </div>
       
 
 
@@ -123,7 +133,7 @@
     <h2 class="section__projects-h2"><span class="section__about-bullet">.</span>Projects</h2>
     <hr class="separator" />
     </div>
-  <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 g-3">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3">
     <div class="col projects__card-container">
       <div class="card h-100 w-75">
         <img src="..." class="card-img-top" alt="...">
@@ -205,6 +215,10 @@
 
 <!--Contact-->
 <section class="section__contact" id="contact">
+  <div class="col-12">
+    <h2 class="section__contact-h2"><span class="section__about-bullet">.</span>Contact</h2>
+    <hr class="separator" />
+    </div>
 <!--just a small mailTo for now. Setup an SMTP form later-->
 </section>
 
