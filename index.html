@@ -335,7 +335,7 @@
       <script>
         function sendMail() {
           (function () {
-            emailjs.init("PublicKey"); //Account public key, put this behind an env?.
+            emailjs.init(process.env.YOUR_PUBLIC_KEY); //Account public key, put this behind an env?.
           })();
 
           let params = {
@@ -345,8 +345,10 @@
             message: document.querySelector("#message").value
           };
 
+          let serviceIDKey = process.env.serviceID;
+          let templateIDKey = process.env.templateID;
 
-          emailjs.send("serviceID", "templateID", params).then(res => {
+          emailjs.send(serviceIDKey, templateIDKey, params).then(res => {
             alert("Email send successfully") //Change to Toast?
           })
             .catch();
