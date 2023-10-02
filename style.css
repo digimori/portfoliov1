@@ -387,3 +387,9 @@ i.fa-bars {
     color: #071330;
     font-size: 2rem;
 }
+
+div.section__contact-form {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
