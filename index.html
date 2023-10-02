@@ -308,7 +308,35 @@
         <h2 class="section__contact-h2 col-12">Interested in hearing more? Drop me an E-mail!</h2>
         <p class="col-12"><a href="mailto:digitamori@gmail.com?subject=Found your Portfolio">Digitamori@gmail.com</a> </p> 
       </div>
-      
+
+
+      <!-- EmailJS -->
+      <h2>Send Email</h2>
+      Sender Name <input type="text" id="senderName"><br>
+      Sender Email <input type="text" id="senderEmail">
+      Subject <input type="text" id="subject"><br>
+      Message: <textarea name="message" id="message" cols="40" rows="10"></textarea>
+      <button type="submit" onclick="sendMail()">Send Message</button> <!--onclick event, maybe swap to an event listener? -->
+      <script>
+        function sendMail() {
+          (function(){
+      emailjs.init("YOUR_PUBLIC_KEY"); //Account public key, put this behind an env?.
+   })();
+
+   let params = {
+    senderName: document.querySelector("#senderName").value,
+    senderEmail: document.querySelector("#senderEmail").value,
+    subject: document.querySelector("#subject").value,
+    message: document.querySelector("#message").value
+   };
+
+
+emailjs.send(params).then(res => {
+    alert("Email send successfully") //Change to Toast?
+   })
+   .catch();
+        }
+      </script>
     </section>
 
   </main>
@@ -318,9 +346,18 @@
 
 
   <!-- Scripts -->
+  <!-- FontAwesome-->
   <script src="https://kit.fontawesome.com/58f44bc351.js" crossorigin="anonymous"></script>
 
+  <!-- EmailJS -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<!-- Global Script -->
   <script src="/script.js"></script>
+
+  <!-- Bootstrap/Popper -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
