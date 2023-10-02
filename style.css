@@ -320,11 +320,6 @@ i:hover {
     color: var(--text-general);
 }
 
-a.live_preview,
-a.github_repo {
-    color: var(--text-highlight);
-}
-
 .card-body {
     background: radial-gradient(circle, rgba(15,35,83,1) 0%, rgba(7,19,48,1) 100%);
 }
@@ -392,4 +387,19 @@ div.section__contact-form {
     display: flex;
     justify-content: center;
     margin: 0 auto;
+}
+
+.fa-arrow-up-right-from-square,
+.fa-github {
+    color: var(--text-highlight);
+    font-size: 0.8rem;
+}
+
+.live_preview a,
+.github_repo a {
+    color: var(--text-highlight);
+    font-size: 0.8rem;
+}
+p.live_preview {
+    margin-bottom: 0;
 }
