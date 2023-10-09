@@ -1,3 +1,5 @@
+/* Main Styles */
+
 html {
     margin: 0;
     padding: 0;
@@ -39,6 +41,8 @@ main {
                 transform: translate(-50%, -50%);
 }
 */
+
+/* Nav Bar style */
 
 nav {
     background: none;
@@ -363,11 +367,26 @@ footer>span {
     color: var(--text-general);
 }
 
+.section__contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-label {
+    color: var(--header-color)
+}
+
 .section__contact-div h2,
 .section__contact-div p {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--text-highlight);
+}
+
+.section__contact-div h3 {
+    text-align: center;
+    color: var(--text-highlight);
 }
 
 .section__contact-div a {
@@ -381,12 +400,6 @@ footer>span {
 i.fa-bars {
     color: #071330;
     font-size: 2rem;
-}
-
-div.section__contact-form {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
 }
 
 .fa-arrow-up-right-from-square,
@@ -403,3 +416,7 @@ div.section__contact-form {
 p.live_preview {
     margin-bottom: 0;
 }
+
+/* Section styles */
+
+/* Footer styles */
