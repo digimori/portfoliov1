@@ -71,10 +71,12 @@ li>a.nav-link:hover {
 
 /* -- General Section height, width, margins, paddings -- */
 .section__hero { 
+    padding-top: 20px;
     display: flex;
     align-items: center;
     width: 100%;
     padding-bottom: 100px;
+
 }
 
 .section__about {
@@ -82,7 +84,6 @@ li>a.nav-link:hover {
     align-items: center;
     justify-content: center;
     width: 75%;
-    padding-top: 20px;
     font-size: 0.9rem;
 }
 
@@ -169,6 +170,7 @@ img.myself {
 #intro__heading {
     font-size: 2.3rem;
     font-weight: 700;
+    margin-top: 1em;
 }
 
 #intro__heading-sub {
@@ -182,6 +184,7 @@ p#intro__heading-text {
     font-size: 0.9rem;
     margin-top: 20px;
     font-weight: 500;
+    margin-left: 1em;
 }
 
 span.section__about-bullet {
@@ -426,6 +429,10 @@ i.fa-bars {
 }
 p.live_preview {
     margin-bottom: 0;
+}
+
+.section__hero-main {
+    padding-left: 1em;
 }
 
 /* Section styles */
