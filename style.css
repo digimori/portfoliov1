@@ -252,6 +252,15 @@ div.container {
     margin-top: 10px;
 }
 
+ul.unord_list {
+    list-style: none;
+}
+
+a.list_nav {
+    text-decoration: none;
+    color: var(--text-highlight)
+}
+
 .section__about-h2 {
     display: flex;
     justify-content: flex-end;
