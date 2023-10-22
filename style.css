@@ -173,6 +173,26 @@ img.myself {
     margin-top: 1em;
 }
 
+.flipX {
+        animation: 1s anim-flipX ease;
+      }
+      @keyframes anim-flipX {
+        0% {
+          opacity: 0;
+          transform: rotateX(90def);
+        }
+        50% {
+          opacity: 1;
+          transform: rotateX(720deg);
+        }
+        100% {
+          /* animate nothing to pause animation at the end */
+          opacity: 1;
+          transform: rotateX(720deg);
+        }
+      }
+
+
 #intro__heading-sub {
     padding-left: 30px;
     font-size: 1.5em;
@@ -184,7 +204,6 @@ p#intro__heading-text {
     font-size: 0.9rem;
     margin-top: 20px;
     font-weight: 500;
-    margin-left: 1em;
 }
 
 span.section__about-bullet {
@@ -433,6 +452,7 @@ p.live_preview {
 
 .section__hero-main {
     padding-left: 1em;
+    text-align: center;
 }
 
 /* Section styles */
@@ -445,3 +465,40 @@ p.live_preview {
         margin-top: 0.5em;
     }
 }
+
+@media screen and (max-width: 768px) {
+    h2 {
+    font-size: 1.2rem;
+}
+}
+
+@media screen and (max-width: 567px) {
+    .section__hero {
+        padding-left: 0;
+        margin-left: 0;
+    }
+}
+
+
+#myBtn {
+    position: fixed; 
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 9999; 
+    border: none; 
+    outline: none;
+    background-color: var(--header-color); 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 12px; 
+  }
+  
+  #myBtn:hover {
+    background-color: var(--text-highlight);
+  }
+  #myBtn:visited {
+    background-color: var(--header-color);
+  }
+
