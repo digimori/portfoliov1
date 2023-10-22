@@ -316,27 +316,28 @@
       </div>
       <div class="section__contact-div row">
         <h2 class="section__contact-h2 col-12">Interested in hearing more? Drop me an E-mail!</h2>
-
         <div class="row section__contact-form">
-          <div class="col-sm-12 col-md-9 col-lg-6">
-            <div class="mb-3">
+            <div class="col-sm-12 col-md-9 col-lg-6">
+              <form id="myForm">
+            <div class="mb-3 form-group">
               <label for="senderName" class="form-label">Name:</label>
-              <input type="text" class="form-control" name="senderName" id="senderName" placeholder="name@example.com">
+              <input type="text" class="form-control" name="senderName" id="senderName" placeholder="name@example.com" required>
               <label for="senderEmail" class="form-label">Email:</label>
               <input type="email" class="form-control" name="senderEmail" id="senderEmail"
-                placeholder="name@example.com">
+                placeholder="name@example.com" required>
               <label for="subject" class="form-label">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject" placeholder="Your Subject Here...">
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Your Subject Here..." required>
             </div>
-            <div class="mb-3">
+            <div class="mb-3 form-group">
               <label for="message" class="form-label">Write your message here...</label>
-              <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+              <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
             </div>
             <div class="mb-3">
-              <button type="submit" id="sendMail" onclick="sendMail()">Send Message</button>
-              <!--  onclick event, maybe swap to an event listener? set a time out on buttonpress because you can send like 10 rapid clicking-->
+              <input type="submit" value="Send" id="send">
             </div>
+          </form>
           </div>
+          
         </div>
 
         <h3>Not a fan of forms? Use the email below!</h3>
@@ -358,6 +359,28 @@
   <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
+
+<script type="text/javascript">
+  (function() {
+      emailjs.init('h3mwLcn-TnDz6jnIj');
+  })();
+</script>
+
+<script type="text/javascript">
+
+  window.onload = function() {
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          emailjs.sendForm('service_x7z95au', 'template_h79m2xb','#myForm', 'h3mwLcn-TnDz6jnIj')
+              .then(function() {
+                  console.log('SUCCESS!');
+              }, function(error) {
+                  console.log('FAILED...', error);
+              });
+      });
+  }
+</script>
+
 
   <!-- Global Script -->
   <script src="/script.js"></script>

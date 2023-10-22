@@ -24,21 +24,3 @@ document.addEventListener("mousemove", (e) => {
 
 
 })*/
-
-function sendMail() {
-          (function () {
-            emailjs.init('h3mwLcn-TnDz6jnIj'); //Account public key, put this behind an env?.
-          })();
-
-          let params = {
-            senderName: document.querySelector("#senderName").value,
-            senderEmail: document.querySelector("#senderEmail").value,
-            subject: document.querySelector("#subject").value,
-            message: document.querySelector("#message").value
-          };
-          
-          emailjs.send("service_x7z95au", "template_h79m2xb", params).then(res => {
-            alert("Email send successfully") //Change to Toast?
-          })
-            .catch();
-        }
