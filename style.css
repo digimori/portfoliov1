@@ -24,6 +24,10 @@ main {
     width: 100%;
 }
 
+div.container {
+    width: 100%;
+}
+
 /* Animated cursor project
 .cursor {
     margin-right: 100px;
@@ -69,6 +73,21 @@ li>a.nav-link:hover {
     color: var(--header-color);
 }
 
+.navbar-brand {
+    margin-left: 100px;
+}
+
+.navbar-brand img {
+    height: 25%;
+    width: 25%;
+    margin-left: 30px;
+}
+
+ul.navbar-nav {
+    display: flex;
+    align-items: center;
+}
+
 /* -- General Section height, width, margins, paddings -- */
 .section__hero { 
     padding-top: 20px;
@@ -94,34 +113,6 @@ li>a.nav-link:hover {
     margin-bottom: 50px;
 }
 
-p.section__about-text {
-    color: var(--text-general);
-    padding: 30px 0 10px 0;
-}
-
-h2 {
-    color: var(--header-color);
-}
-
-div.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-img.myself {
-    height: 300px;
-    width: 300px;
-    border-radius: 8px;
-    box-shadow: 0.5rem 0.5rem #C3E0E5, -0.5rem -0.5rem #ccc;
-}
-
-.stack__icons-list_item img {
-    height: 30px;
-    margin-right: 0.5em;
-} 
-
-
-
 .section__education {
     width: 100%;
     padding-top: 20px;
@@ -144,7 +135,8 @@ img.myself {
     padding-top: 60px;
 }
 
-.section__contact-h2 {
+.section__contact-h2,
+.section__education-h2 {
     display: flex;
     justify-content: flex-start;
 }
@@ -156,9 +148,15 @@ img.myself {
     margin-right: auto;
 }
 
-.section__education-h2 {
-    display: flex;
-    justify-content: flex-start;
+
+/* ----- Typography Settings ---------- */
+p.section__about-text {
+    color: var(--text-general);
+    padding: 30px 0 10px 0;
+}
+
+h2 {
+    color: var(--header-color);
 }
 
 #intro__heading,
@@ -172,6 +170,41 @@ img.myself {
     font-weight: 700;
     margin-top: 1em;
 }
+
+#intro__heading-sub {
+    padding-left: 30px;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+p#intro__heading-text {
+    color: var(--text-general);
+    font-size: 0.9rem;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+
+/* --- Images --- */
+
+div.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img.myself {
+    height: 300px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0.5rem 0.5rem #C3E0E5, -0.5rem -0.5rem #ccc;
+}
+
+.stack__icons-list_item img {
+    height: 30px;
+    margin-right: 0.5em;
+} 
+
+/*---- ANimations ---- */
 
 .flipX {
         animation: 1s anim-flipX ease;
@@ -193,18 +226,7 @@ img.myself {
       }
 
 
-#intro__heading-sub {
-    padding-left: 30px;
-    font-size: 1.5em;
-    font-weight: 500;
-}
 
-p#intro__heading-text {
-    color: var(--text-general);
-    font-size: 0.9rem;
-    margin-top: 20px;
-    font-weight: 500;
-}
 
 span.section__about-bullet {
     color: var(--text-highlight);
@@ -215,6 +237,8 @@ span.nav-no {
     padding-right: 2px;
     color: var(--text-highlight);
 }
+
+/* ----------- Buttons ----- */
 
 #intro__heading-button {
     background-color: #738FA7;
@@ -245,29 +269,11 @@ button.resume:hover {
     transition: 0.8s;
 }
 
-ul.navbar-nav {
-    display: flex;
-    align-items: center;
-}
-
 i.fa-download {
     padding-left: 5px;
     font-size: 1rem;
 }
 
-.navbar-brand {
-    margin-left: 100px;
-}
-
-.navbar-brand img {
-    height: 25%;
-    width: 25%;
-    margin-left: 30px;
-}
-
-div.container {
-    width: 100%;
-}
 
 .social-links {
     list-style: none;
@@ -361,11 +367,20 @@ i:hover {
     background: radial-gradient(circle, rgba(15,35,83,1) 0%, rgba(7,19,48,1) 100%);
 }
 
+
+
+/* ------- Offcanvas -------- */
+
 .offcanvas__button {
     display: flex;
     justify-content: flex-end;
     padding-top: 30px;
 }
+
+.offcanvas__button-toggle {
+    background-color: var(--header-color);
+}
+
 
 
 .card-img-top {
@@ -426,9 +441,6 @@ footer>span {
     color: #C3E0E5;
 }
 
-.offcanvas__button-toggle {
-    background-color: var(--header-color);
-}
 
 i.fa-bars {
     color: #071330;
@@ -466,9 +478,12 @@ p.live_preview {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     h2 {
     font-size: 1.2rem;
+}
+.section__projects-container {
+    flex-direction: column;
 }
 }
 
@@ -479,7 +494,13 @@ p.live_preview {
     }
 }
 
+@media screen and (min-width: 997px) {
+    .stack__icons-list_item img {
+        margin-top: 1rem;
+    }
+}
 
+/* --- Go to top button --- */
 #myBtn {
     position: fixed; 
     bottom: 20px; 
