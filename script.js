@@ -35,3 +35,19 @@ document.addEventListener("DOMContentLoaded", function(){
     bsOffcanvas.toggle();
   });
 });
+
+
+// CSS Animation Observer:
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show"); // Will make the section visible when the intersection is reached via the show class
+    } else {
+      entry.target.classList.remove("show"); // Removes the classlist and the element from view when not intersecting.
+    }
+  });
+});
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el)); // Telling it to observe each looped element to toggle the classlists.

@@ -28,24 +28,6 @@ div.container {
     width: 100%;
 }
 
-/* Animated cursor project
-.cursor {
-    margin-right: 100px;
-    border: none;
-    height: 500px;
-    width: 500px;
-    border-radius: 50%;
-    opacity: 0.3;
-    background: radial-gradient(circle, rgba(15,35,83,1) 0%, rgba(7,19,48,1) 100%);
-    z-index: 0.5;
-    position: fixed;
-    pointer-events: none;
-    box-shadow: 0 0 60px rgba(15,35,83,0.5),
-                0 0 60px rgba(7,19,48,0.5) 100%;
-                transform: translate(-50%, -50%);
-}
-*/
-
 /* Nav Bar style */
 
 nav {
@@ -156,7 +138,7 @@ ul.navbar-nav {
     }
   }
   
-
+/* Section styles */
 
 .section__about-row {
     width: 100%;
@@ -165,26 +147,23 @@ ul.navbar-nav {
     margin-bottom: 50px;
 }
 
-.section__education {
-    width: 100%;
-    padding-top: 20px;
+.section__about-h2 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1em;
 }
 
-.section__projects {
+.section__projects,
+.section__contact {
     width: 75%;
     margin: 0 auto;
     padding-top: 20px;
+    padding-bottom: 60px;
 }
 
 .section__projects-h2 {
     display: flex;
     justify-content: flex-end;
-}
-
-.section__contact {
-    width: 75%;
-    margin: 0 auto;
-    padding-top: 60px;
 }
 
 .section__contact-h2,
@@ -198,6 +177,15 @@ ul.navbar-nav {
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--text-general);
+    padding: 30px 0;
+    width: 100%;
+}
+
+.section__education-qualification h3 {
+    color: var(--header-color);
+    font-size: 1.4rem;
+    margin-top: 0.75em;
 }
 
 
@@ -256,29 +244,7 @@ img.myself {
     margin-right: 0.5em;
 } 
 
-/*---- ANimations ---- */
-
-.flipX {
-        animation: 1s anim-flipX ease;
-      }
-      @keyframes anim-flipX {
-        0% {
-          opacity: 0;
-          transform: rotateX(90def);
-        }
-        50% {
-          opacity: 1;
-          transform: rotateX(720deg);
-        }
-        100% {
-          /* animate nothing to pause animation at the end */
-          opacity: 1;
-          transform: rotateX(720deg);
-        }
-      }
-
-
-
+/* ---- Numbers and Bullets ---- */
 
 span.section__about-bullet {
     color: var(--text-highlight);
@@ -304,7 +270,8 @@ span.nav-no {
     color: var(--text-general);
 }
 
-button.resume {
+button.resume,
+.sendMail {
     background-color: #fff;
     color: #071330;
     
@@ -315,7 +282,8 @@ button.resume {
     border: none;
 }
 
-button.resume:hover {
+button.resume:hover,
+.sendMail {
     background-color: var(--header-color);
     color: var(--text-general);
     transition: 0.8s;
@@ -325,7 +293,6 @@ i.fa-download {
     padding-left: 5px;
     font-size: 1rem;
 }
-
 
 .social-links {
     list-style: none;
@@ -341,37 +308,13 @@ a.list_nav {
     color: var(--text-highlight)
 }
 
-.section__about-h2 {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1em;
-}
-
-@media screen and (max-width: 768px) {
-    .section__hero {
-        padding-left: 50px;
-    }
- ul.social-links {
-    display: flex;
-    justify-content: space-between;
- }    
- li.social-icons {
-        padding: 0 6px;
-    }
-}
-
 li.stack__icons-list_item {
     display: inline;
 }
 
 hr {
     color: var(--text-general);
-
 }
-
-/* MAKE SURE YOUR TEXT IS CONSISTENT SIZING TO MAKE MEDIA QUERIES FASTER */
-/* Should I make some root settings here for font families and colours?? Saves me typing them in all the time */
-
 
 .projects__card-container {
     display: flex;
@@ -391,20 +334,6 @@ i:hover {
     color: var(--text-general);
 }
 
-.section__education-qualification p {
-    color: var(--text-general);
-}
-
-.section__education-qualification h3 {
-    color: var(--header-color);
-    font-size: 1.4rem;
-    margin-top: 0.75em;
-}
-
-.section__education {
-    padding: 30px 0;
-}
-
 .card-title {
     font-size: 1.1rem;
     color: var(--text-general);
@@ -419,8 +348,6 @@ i:hover {
     background: radial-gradient(circle, rgba(15,35,83,1) 0%, rgba(7,19,48,1) 100%);
 }
 
-
-
 /* ------- Offcanvas -------- */
 
 .offcanvas__button {
@@ -433,7 +360,7 @@ i:hover {
     background-color: var(--header-color);
 }
 
-
+/* ------- Offcanvas End -------- */
 
 .card-img-top {
     height: 220px;
@@ -456,16 +383,6 @@ button.tech-stack  {
     pointer-events: none;
 }
 
-footer {
-    color: var(--text-highlight);
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-}
-
-footer>span {
-    color: var(--text-general);
-}
 
 .section__contact-form {
     display: flex;
@@ -519,9 +436,22 @@ p.live_preview {
     text-align: center;
 }
 
-/* Section styles */
+
+
 
 /* Footer styles */
+footer {
+    color: var(--text-highlight);
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+}
+
+footer>span {
+    color: var(--text-general);
+}
+
+/* ----- Media Queries ----- */
 
 @media screen and (max-width: 997px) {
     .stack__icons-list_item img {
@@ -537,6 +467,16 @@ p.live_preview {
 .section__projects-container {
     flex-direction: column;
 }
+.section__hero {
+    padding-left: 50px;
+}
+ul.social-links {
+display: flex;
+justify-content: space-between;
+}    
+li.social-icons {
+    padding: 0 6px;
+}
 }
 
 @media screen and (max-width: 567px) {
@@ -551,6 +491,12 @@ p.live_preview {
         margin-top: 1rem;
     }
 }
+
+@media (prefers-reduced-motion) {
+    .hidden {
+      transition: none;
+    }
+  }
 
 /* --- Go to top button --- */
 #scrollTop {
@@ -575,3 +521,38 @@ p.live_preview {
     background-color: var(--header-color);
   }
 
+
+
+/* Animation test */
+.hidden {
+    opacity: 0;
+    filter: blur(2px);
+    transition: all 3s;
+    transform: translateX(-100%);
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+  
+
+.projects__card-container:nth-child(1) {
+    transition-delay: 200ms;
+}
+.projects__card-container:nth-child(2) {
+    transition-delay: 400ms;
+}
+.projects__card-container:nth-child(3) {
+    transition-delay: 600ms;
+}
+.projects__card-container:nth-child(4) {
+    transition-delay: 200ms;
+}
+.projects__card-container:nth-child(5) {
+    transition-delay: 400ms;
+}
+.projects__card-container:nth-child(6) {
+    transition-delay: 600ms;
+}

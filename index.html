@@ -45,7 +45,7 @@
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand d-none d-lg-block" href="#"><img src="/assets/1JA3ru-LogoMakr.png"></a>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse hidden" id="navbarSupportedContent">
           <ul class="navbar-nav mb-2 mb-lg-0 justify-content-end">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#about"><span class="nav-no">01.</span> About</a>
@@ -106,7 +106,7 @@
     </section>
 
     <!-- About Me -->
-    <section class="section__about container-fluid slit-in-diagonal-1" id="about">
+    <section class="section__about container-fluid slit-in-diagonal-1 hidden" id="about">
       <div class="row section__about-row">
         <div class="col-md-12 col-sm-12 col-lg-6 image-container">
           <img src="/assets/muhself.png" class="myself" alt="Image" />
@@ -140,7 +140,7 @@
 
     <!--Education-->
 
-    <section class="section__education" id="education">
+    <section class="section__education hidden" id="education">
       <div class="col-12">
         <h2 class="section__education-h2"><span class="section__about-bullet">.</span>Education</h2>
         <hr class="separator" />
@@ -169,7 +169,7 @@
         <hr class="separator" />
       </div>
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-3 section__projects-container">
-        <div class="col projects__card-container">
+        <div class="col projects__card-container hidden">
           <div class="card h-100 w-75">
             <img src="/assets/media/images/Bootoobpreview.png" class="card-img-top" alt="dice game image">
             <div class="card-body">
@@ -192,7 +192,7 @@
             </div>
           </div>
         </div>
-        <div class="col projects__card-container">
+        <div class="col projects__card-container hidden">
           <div class="card h-100 w-75">
             <img src="assets/media/images/dreum.png" class="card-img-top" alt="drumkit game image">
             <div class="card-body">
@@ -210,7 +210,7 @@
             </div>
           </div>
         </div>
-        <div class="col projects__card-container">
+        <div class="col projects__card-container hidden">
           <div class="card h-100 w-75">
             <img src="assets/media/images/quizshot.png" class="card-img-top" alt="Quiz game image">
             <div class="card-body">
@@ -234,7 +234,7 @@
             </div>
           </div>
         </div>
-        <div class="col projects__card-container">
+        <div class="col projects__card-container hidden">
           <div class="card h-100 w-75">
             <img src="assets/media/images/profilepagewholeview.png" class="card-img-top" alt="Personal library image">
             <div class="card-body">
@@ -261,7 +261,7 @@
             </div>
           </div>
         </div>
-        <div class="col projects__card-container">
+        <div class="col projects__card-container hidden">
           <div class="card h-100 w-75">
             <img src="assets/media/images/homepagedesktop.png" class="card-img-top" alt="Cottage delights image">
             <div class="card-body">
@@ -285,7 +285,7 @@
             </div>
           </div>
         </div>
-        <div class="col projects__card-container">
+        <div class="col projects__card-container hidden">
           <div class="card h-100 w-75">
             <img src="assets/media/images/golds.png" class="card-img-top" alt="Personal fitness image">
             <div class="card-body">
@@ -341,7 +341,7 @@
                 <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
               </div>
               <div class="mb-3">
-                <input type="submit" value="Send" id="send">
+                <input type="submit" class="sendMail" value="Send" id="send">
               </div>
             </form>
           </div>
